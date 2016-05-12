@@ -1,0 +1,111 @@
+
+#team {
+  height:650px;
+  border:0px solid green;
+  position:relative;
+}
+.our-valuesss {
+  width:160px;
+  height:170px;
+  opacity:0.5;
+  margin-left: 30px;
+  overflow: hidden;
+  color: #fff;
+   -webkit-mask-image: url('../images/mask4.png');
+    -o-mask-image: url('../images/mask4.png');
+    -moz-mask-image: url('../images/mask4.png');
+    mask: url('../images/mask4.png');
+transition: opacity 300ms ease-in-out 0ms; 
+}
+.person {
+  width:140px;
+  height:150px;
+  position:absolute;
+  background-size:cover;
+  opacity:0.5;
+  //overflow: hidden;
+  color: #fff;
+  /*  -webkit-mask-image: url('../images/teambgs1.png');
+
+    -o-mask-image: url('../images/teambgs1.png');*/
+/*    -moz-mask-image: url(../images/teambgs1.png);
+    mask: url(../images/teambgs1.png);*/
+transition: opacity 300ms ease-in-out 0ms; 
+font-size: 1em;
+font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.details h3 {
+  font-size: 1.4em !important;
+}
+.pers-active {
+  opacity:1;
+  z-index: 1;
+
+}
+ .fade{
+  opacity:0.5;
+    z-index: -1;
+}
+
+ .details {
+  position: absolute;
+  border:1px;
+  width:250px;
+  color:white;
+  padding:0px 10px 50px 10px;
+  height:auto;
+  border:1px solid white;
+  background-color:rgba(0,136,124,.7);
+  display:none;
+  z-index:1;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 0.8em;
+
+}
+ .icons {
+  position: absolute;
+  border:1px;
+  /*//transform:rotate(30deg);
+  */width:250px;
+  //border:1px solid white;
+  //background-color:rgba(0,136,124,.8);
+  display:none;
+  z-index:2;
+}
+ .icon{
+  /*width: 40px;
+    height: 40px;*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+
+}
+.transforma{
+transition: opacity 300ms ease-in-out 0ms; 
+}
+.img-icon{
+  width:30px;
+  height:30px;
+  background-size:100%!important;
+  background-repeat: no-repeat!important;
+}
+.img-icon-big{
+  width:60px;
+  height:60px;
+  background-size:100%!important;
+  background-repeat: no-repeat!important;
+}
+
+.mail{background: url('../images/social/mail.png');}
+.mail:hover{background: url('../images/social/mail-hover.png');}
+.fb{background: url('../images/social/fb.png');}
+.fb:hover{background: url('../images/social/fb-hover.png');}
+.ln{background: url('../images/social/ln.png');}
+.ln:hover{background: url('../images/social/ln-hover.png');}
+.tw{background: url('../images/social/tw.png');}
+.tw:hover{background: url('../images/social/tw-hover.png');}
+.skype{background: url('../images/social/skype.png');}
+.skype:hover{background: url('../images/social/skype-hover.png');}
+.insta{background: url('../images/social/insta.png');}
+.insta:hover{background: url('../images/social/insta-hover.png');}

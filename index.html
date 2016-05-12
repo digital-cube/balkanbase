@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="rs">
+<head>
+	<title>Digital cube</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/scroll.css">
+<!-- 	<link rel="stylesheet" href="assets/css/style.css">
+ -->	<link rel="stylesheet" href="assets/css/team.css">
+	<!-- Important Owl stylesheet -->
+	<link rel="stylesheet" href="assets/owl-carousel/owl.carousel.css">
+	<!-- Default Theme -->
+	<link rel="stylesheet" href="assets/owl-carousel/owl.theme.css">
+
+	<!--<link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">-->
+	<!--<link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">-->
+	<!--<link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png">-->
+	<!--<link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png">-->
+	<!--<link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png">-->
+	<!--<link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png">-->
+	<!--<link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png">-->
+	<!--<link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png">-->
+	<!--<link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png">-->
+	<!--<link rel="icon" type="image/png" sizes="192x192"  href="./favicon/android-icon-192x192.png">-->
+	<!--<link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">-->
+	<!--<link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">-->
+	<!--<link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">-->
+	<link rel="manifest" href="./favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="./favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+</head>
+<body id='body' data-spy="scroll" data-target=".navbar" data-offset="50" style="background:white;">
+
+<div id="overlay"></div>
+<div id="overlayContent">
+    <img id="imgBig" src="" alt="" width="70%" />
+    <div id="show-video"  width="70%" >
+    </div>
+</div>
+<div class='desctop' id='top'></div>
+<div class="container-fluid">
+	<div class="row">
+		<div id="about" class="col-md-12">
+		    <div class="navbar navbar-fixed-top">
+				<div class="navbar-inner">
+				  <div class="container">
+					<a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					</a>
+					<div class="nav-collapse">
+					<div id="navbar" class="padding-no collapse navbar-collapse ">
+									<ul class="nav navbar-nav">
+										<li class=""><a class="page-scroll" href="#about">O sportu</a></li>
+										<li class=""><a class="page-scroll" href="#gallery">Galerija</a></li>
+										<li class=" "><a class="page-scroll" href="#video">Video</a></li>
+										<li class=" "><a class="page-scroll" href="#teams">Ko smo mi</a></li>
+										<li class="logo-holder hidden-xs hidden-sm  ">
+										   <img src="./assets/images/bb-logo.png" width="140" id="logo"  />
+										</li>
+										<li class=""><a class="page-scroll" href="#members" >Postani clan</a></li>
+										<li class=""><a class="page-scroll" href="#partners">Prijavi organizacije</a></li>
+										<li class=""><a class="page-scroll" href="#contact">kontakt   </a></li>
+								  </ul>
+								</div>
+					</div>
+				  </div>
+				</div><!-- /navbar-inner -->
+  			</div>
+	    </div>
+	</div>
+    
+    
+</div>
+<style>
+	#bg{
+		width:100%;
+		/*  height:600px;
+        */  overflow:hidden;
+		position: relative;
+		/*background-image: url('./assets/images/pat.png');
+        background-size: cover;*/
+
+
+	}
+	.row-centered{text-align: center;}
+	#bg:after {
+		content: "";
+		width:100%;
+		background: url(./assets/images/video-bg.png);
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		position: absolute;
+		opacity: 0.5;
+	}
+	#bg_container {
+		position: relative;
+		width: 100%;
+		height: 0;
+		padding-bottom: 56.25%;
+	}
+	.video {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.section{color:#4c4c4c; padding-bottom:60px; background: white; text-align: center;} 
+	.about-def{ box-shadow: 0px -2px -0px 0px #fafafa; background:url("./assets/images/about-bg-shape.png") no-repeat white;  background-size: cover;  }
+	.contact-def{ box-shadow: 0px -2px -0px 0px #DADADA; background:url("./assets/images/about-bg-shape.png") no-repeat white;  background-size: cover;  }
+	.members-def{  background:url("./assets/images/members-bg.png") no-repeat #fafafa;  background-size: contain; box-shadow: 0px -2px -0px 0px #DADADA;}
+	.team-def{ text-align: left; }
+
+	.section h2{   margin:auto; font-size: 2.5em; font-weight: 300; width: 400px; height: 100px; background:url('./assets/images/about-title-bg.png') no-repeat;}
+	.section h3{padding:10px;font-size: 1.5em; font-weight: 300;color:#de6a25;}
+	.section p{font-size: 1em; font-weight: 300;color:#8b8b8b;}
+	.section .section-bg-shape {
+		top: -61px;
+		margin: auto;
+		display: block;
+		width: 280px;
+		height: 62px;
+		position: relative;
+	}
+	.section .about-shape{background: url('./assets/images/about-shape.png');}
+	.section .gall-shape{background: url('./assets/images/gall-shape.png');}
+	.section .members-shape{background: url('./assets/images/about-shape.png');}
+	.section .partners-shape{background: url('./assets/images/members-shape.png');}
+	.section .contact-shape{background: url('./assets/images/about-shape.png');}
+	.section .video-shape{background: url('./assets/images/video-shape.png');}
+	.section .team-shape{background: url('./assets/images/video-shape.png');}
+	.gall-section{box-shadow: 0px -2px 0px #e6e3e1;}
+	.team-section{margin-bottom: 100px; box-shadow: 0px -2px 0px #e6e3e1;}
+	.partners-section{margin-bottom: 100px; box-shadow: 0px -2px 0px #e6e3e1;}
+	.video-section{margin-bottom: 100px; box-shadow: 0px -2px 0px #e6e3e1;}
+	.about-content{position: relative; top:-30px;}
+	.gall-content{position: relative; top:-30px;}
+	.members-content{position: relative; top:-30px;}
+	.partners-content{position: relative; top:-30px;}
+	.contact-content{position: relative; top:-30px;}
+	.video-content{position: relative; top:-30px;}
+	.team-content{position:relative; top:-30px; }
+	.contact-holder{padding:50px 0;}
+	#video-holder{    top: 45px;
+    position: relative;}
+	#team-holder{ padding: 100px 0px;}
+	#sponsors-carousel{top:50px;bottom: 50px; height: 200px;}
+	.section .about-img{ background: url('./assets/images/vector-logo.png') no-repeat;}
+	.section .gall-img{ background: url('./assets/images/gallery-logo.png') no-repeat; left:30px;}
+	.section .members-img{ background: url('./assets/images/members-logo.png') no-repeat; left:40px;}
+	.section .partners-img{ background: url('./assets/images/partners-logo.png') no-repeat; left:40px;}
+	.section .contact-img{ background: url('./assets/images/contact-logo.png') no-repeat; left:40px;}
+	.section .video-img{ background: url('./assets/images/video-logo.png') no-repeat; left:40px;}
+	.section .team-img{ background: url('./assets/images/team-logo.png') no-repeat; left:40px;}
+	.team-left{text-align: left;}
+	.team-right{text-align: right;}
+	.section .logo {
+		 top: -100px;
+		 margin: auto;
+		 display: block;
+		 width: 136px;
+		 height: 61px;
+		 position: relative;
+	 }
+
+	.footer{
+		background: #de6a25;
+		color:white;
+		text-align: center;
+
+	}
+	.video-section h4{font-weight: 300;font-size: 1em;text-align: left;padding:5px 0px 5px 30px;}
+
+	.video-section .btn-join-vim{background: url("./assets/images/vim-logo.png") no-repeat; width:40px; }
+	.footer .btn-join-fb{background: url("./assets/images/fb-logo.png") no-repeat; width:40px; }
+	.team-section .btn-join-fb{background: url("./assets/images/fb-logo.png") no-repeat; width:40px; }
+	.footer .btn-join-tw{background: url("./assets/images/twitter-logo.png") no-repeat; width:40px; }
+	.team-setion .btn-left{margin-left:;}
+	.team-setion .btn-rght{margin-left:;}
+	.video-section .btn-join,.video-section .btn-join:hover{
+		border:1px solid #999999;
+		border-radius: 2px!important;
+		-webkit-border-radius: 2px!important;
+		-moz-border-radius: 2px!important;
+		width:84%;
+		cursor: pointer;
+		padding: 20px 30px;
+		margin-top: 20px;
+		margin:auto!important;
+		/*margin-left: 50px;*/
+		position: relative;
+	}
+
+	.team-section .btn-join,.team-section .btn-join:hover{
+		border:1px solid #999999;
+		border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		width:100%;
+		cursor: pointer;
+		padding: 20px 30px;
+		margin-top: 100px;
+		/*margin-left: 50px;*/
+		position: relative;
+	}
+	.footer .btn-join,.footer .btn-join:hover{
+		border:1px solid white;
+		border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		width:100%;
+		cursor: pointer;
+		padding: 20px 30px;
+		margin-top: 40px;
+		position: relative;
+	}
+	#overlayContent{
+  
+    position: fixed;
+    width: 800px;
+    /*height: 400px;*/
+    top: 50%;
+    left: 50%;
+
+    text-align: center;
+    display: none;
+    overflow: hidden;
+    z-index: 1000001;
+	}
+    #overlayContent{ margin-top: -300px; margin-left: -400px;}
+     #overlay{
+    position: fixed; 
+    width: 100%; 
+    height: 100%; 
+    top: 0px; 
+    left: 0px; 
+    background-color: #000; 
+    opacity: 0.7;
+    filter: alpha(opacity = 70) !important;
+    display: none;
+    z-index: 1000000;
+    cursor: pointer;
+	}
+	.footer p{
+		padding: 30px;
+	}
+	.persons, article{
+		margin:50px 0;
+	}
+	
+/* ----------- Navigation start ------------*/
+
+.navbar .navbar-nav {
+        padding-top:26px;
+	  display: inline-block;
+	  float: none;
+	  vertical-align: top;}
+	  .nav-spec{color: gray;}
+	  .navbar-toggle {
+		  width: 100%;
+		  float: none;
+		  margin-right: 0;
+			}
+	.navbar .navbar-collapse {text-align: center;}
+	.nav {
+	  list-style: none;
+	  padding: 0;
+	  margin: 0 auto;
+	  opacity: 1;
+	  -moz-transition: opacity 1000ms ease-in-out 3800ms;
+	  -o-transition: opacity 1000ms ease-in-out 3800ms;
+	  -webkit-transition: opacity 1000ms ease-in-out 3800ms;
+	  transition: opacity 1000ms ease-in-out 3800ms; }
+	.nav:before, .nav:after {
+	    content: " ";
+	    display: table; }
+  	.nav:after{clear: both; }
+  	/*.nav li {
+    	float: left;
+    	position: relative; }*/
+    .nav li a{
+      font-size: 1em;
+      opacity: 0.9;
+      color: #666;
+      text-decoration: none; }
+    
+  	.nav.hidden {opacity: 0;}
+	.polygons-holder{
+		position:relative;
+		top:0px;}
+	.nav li a:hover, {
+    font-size: 14px;
+    opacity: 0.9;
+    color: #666;
+    background:white;
+    text-decoration: none;
+    border-bottom: 2px solid #f7921e;
+}
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+    background-color: transparent;
+}
+.active{
+     opacity: 0.9;
+    color: #666;
+    background:white;
+    text-decoration: none;
+    border-bottom: 2px solid #f7921e;
+}
+.focusedNone{
+	border:1px!important;
+	border-color: 0px rgba(82,168,236,.8) ;
+    outline: 1px!important;
+    -moz-box-shadow: 0 0 1px gray !important;
+    box-shadow: 0 0 1px gray !important;
+}
+.navbar-toggle{
+  position:relative;
+  float:right;
+  
+  background-color:transparent;
+  background-image:none;
+  border:1px solid transparent;
+  border-radius:4px}
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover,
+{
+    outline:none !important;
+    -webkit-appearance:none;
+}
+	.logo-holder{
+      background: url('./assets/images/logo-holder.png') no-repeat bottom center rgba(255, 255, 255, 0);
+    padding: 0px 71px;
+	    display: block;
+      padding-bottom: 32px !important;
+    margin-top: -32px !important;
+	}
+	textarea{height: 80px !important;resize: none;}
+	input[type='text'],input[type='email'],textarea{
+		border-radius:1px !important;
+	}
+.img-circle {margin-top: 45px;}
+	::-webkit-input-placeholder {
+	font-weight: 300;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	}
+
+	:-moz-placeholder { /* Firefox 18- */
+	font-weight: 300;
+	font-size: 0.8em;
+	text-transform: uppercase;}
+
+	::-moz-placeholder {  /* Firefox 19+ */
+	font-weight: 300;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	}
+
+	:-ms-input-placeholder {  
+	font-weight: 300;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	}
+	.send-btn{background:#de6a25; font-weight:300;width:100%; height:40px;padding:12px 0; font-size:0.8em; color:white; border-radius:0px;outline:none;border:0px white; cursor:pointer;	text-transform: uppercase;}
+	.contact-text-holder{text-align: left; font-weight: 300;}
+	.contact-text-holder p {font-size: 0.8em;padding-left: 10px;}
+	.contact-text-holder h3 {font-size:1em; margin:0; padding-left: 10px;}
+	.contact-text-holder .first {margin-top: 40px;}
+/* ----------- Navigation end ------------*/
+
+	.navbar{height:97px;background: white;  box-shadow: 0px 2px -0px 0px #dadada;}
+	.video-thumb{ border:2px solid gray;  margin:auto!important;width:300px;height:178px;display: block;}
+	/*.video-thumb a{top:25%;position: relative; background: url('./assets/images/play-grey.png');width: 76;height: 76;display: block;}
+	.video-thumb a:hover, .video-thumb a:active, {top:25%;position: relative;background: url('./assets/images/play-orange.png');width: 76;height: 76;display: block;position: relative;}
+*/
+
+
+	.video-thumb img{top:25%;position: relative; }
+
+
+
+	@media screen and (min-width: 1200px){
+		.footer .btn-join::after{
+			content: url("./assets/images/after-btn.png");
+			position: absolute;
+			margin-left: 20px;
+		}
+	}
+	@media screen and (min-width: 991px) and (max-width: 1200px){
+		.footer .btn-join::after{
+			content: url("./assets/images/after-btn.png");
+			position: absolute;
+			margin-left: 20px;
+		}
+	}
+	@media screen and (min-width: 768px) and (max-width: 991px){
+		.footer .btn-join::after{
+			content: "";
+		}
+	}
+	@media screen and (min-width: 240px) and (max-width: 768px){
+		.footer .btn-join::after{
+			content: "";
+		}
+	}
+</style>
+<div id="bg">
+	<div id="bg_container">
+		<iframe id="vid" class="video" width="100%" src="http://www.youtube.com/v/aaxDkWruhrg?vq=medium&loop=1&autoplay=1&rel=0&showinfo=0&controls=0&volume=0&enablejsapi=1&playlist=aaxDkWruhrg" volume="0" autoplay frameborder="0"></iframe>
+	</div>
+</div>
+
+
+<section id='about' class="section about-def">
+	<div class="container">
+		<div class="row row-centered">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+				<div  class="section-bg-shape about-shape img-responsive"></div>
+				<div  class="logo about-img img-responsive"></div>
+			</div>
+			<div class="about-content">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+					<h2 class="img-responsive">About us</h2>
+					<h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </h3>
+					<p>BASE jumping, also sometimes written as B.A.S.E jumping, is an activity that employs an initially packed<br> parachute to jump from fixed objects. "B.A.S.E." is an acronym that stands for four categories of fixed<br> objects from which one can jump: buildings, antennas, spans (bridges), and earth (cliffs).</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<div id='ideja'>
+<section id='gallery' class="section gall-section">
+	<div class="container">
+		<div class="row row-centered">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+				<div  class="section-bg-shape gall-shape img-responsive"></div>
+				<div  class="logo gall-img img-responsive"></div>
+			</div>
+			<div class="gall-content">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+					<h2 class="img-responsive">Gallery</h2>
+				</div>
+            	<div id="gallery-holder"></div>             	
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+
+<section id='video' class="section video-section">
+	<div class="container">
+		<div class="row row-centered">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+				<div  class="section-bg-shape video-shape img-responsive"></div>
+				<div  class="logo video-img img-responsive"></div>
+			</div>
+			<div class="video-content">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+					<h2 class="img-responsive">Video</h2>
+				</div>
+            	<div id="video-holder">
+            		
+
+
+            	</div>             	
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id='teams' class="section team-section">
+	<div class="container">
+		<div class="row row-centered">
+			
+				<div  class="section-bg-shape team-shape img-responsive"></div>
+				<div  class="logo team-img img-responsive"></div>
+			</div>
+			<div class="team-content">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+					<h2 class="img-responsive">Who we are</h2>
+				</div>
+            	<div id="team-holder" ></div>             	
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id='members' class="section members-def">
+	<div class="container">
+		<div class="row row-centered">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+				<div  class="section-bg-shape members-shape img-responsive"></div>
+				<div  class="logo members-img img-responsive"></div>
+			</div>
+			<div class="members-content">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+					<h2 class="img-responsive"> Be a member</h2>
+					<h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </h3>
+					<p>BASE jumping, also sometimes written as B.A.S.E jumping, is an activity that employs an initially packed<br> parachute to jump from fixed objects. "B.A.S.E." is an acronym that stands for four categories of fixed<br> objects from which one can jump: buildings, antennas, spans (bridges), and earth (cliffs).</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+
+<section id='partners' class="section partners-section partners-def">
+	<div class="container">
+		<div class="row row-centered">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+				<div  class="section-bg-shape partners-shape img-responsive"></div>
+				<div  class="logo partners-img img-responsive"></div>
+			</div>
+			<div class="partners-content">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+					<h2 class="img-responsive"> Partners </h2>
+					
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div id="sponsors-carousel" class="owl-carousel">
+					<div>
+						<a href="http://digitalcube.rs" target="_blank"><img src="http://digitalcube.rs/assets/images/dc-logo.svg" width="90" /></a>
+					</div>
+						<!-- <div>
+					  	<a href="http://www.redbull.com/" target="_blank"><img src="./assets/images/sponsors/redbul.png" width="150" /></a>
+			      	</div>
+			      	<div>				   
+					  	<a href="http://www.u-turn.de" target="_blank"><img src="./assets/images/sponsors/uturn.png" width="150" /></a>
+			      	</div>
+			      
+			      	<div>				   
+					  	<a href="http://vss.rs/" target="_blank"><img src="./assets/images/sponsors/vss.png" width="150" /></a>
+			      	</div> -->
+
+	      		</div>
+	      		</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section id='contact' class="section contact-def">
+	<div class="container">
+		<div class="row row-centered">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+				<div  class="section-bg-shape contact-shape img-responsive"></div>
+				<div  class="logo contact-img img-responsive"></div>
+			</div>
+			<div class="contact-content">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+					<h2 class="img-responsive"> Contact</h2>
+					
+					<div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 col-sm-offset-2 col-md-offset-2  col-lg-offset-2">
+						<div class="contact-holder">
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+								<fieldset class="form-group">
+									<input type="text" class="focusedNone form-control" id="name" name="name" maxlength="32" placeholder="Enter your name">
+								</fieldset>				
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+								<fieldset class="form-group">
+								   <input type="email" class="focusedNone form-control" id="email" name="email" maxlength="40" placeholder="Enter your email">
+								</fieldset>
+							</div>
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+								<fieldset class="form-group">
+									<textarea  maxlength="320"  class="focusedNone form-control" id="message" placeholder="Enter your message"></textarea>
+		  						</fieldset>						
+	  						</div>
+	  						<div class="col-xs-12 col-sm-6 col-sm-offset-6 col-md-6 col-md-offset-6 col-lg-6 col-lg-offset-6">
+	  							<div class="pull-right send-btn">Send message</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+						<div class="contact-text-holder">
+							<h3 class="first">Organisation address</h3>
+							<p>Kralja Aleksandra 215<br>11000 Beograd<br>Serbia</p>	
+							<h3>Email:info@balkanbase.com</h3>
+							<h3>Phone:011 111 111</h3>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section  class="footer">
+	<div class="container">
+		<div class="row">
+			<div class=" col-md-12 col-sm-12 col-xs-12 " >
+				<div class=" col-md-4 col-md-offset-1 col-sm-6 col-xs-6 " >
+					<div class="btn-join btn-join-fb">JOIN US ON FACEBOOK</div>
+				</div>
+				<div class=" col-md-4 col-md-offset-2 col-sm-6 col-xs-6 " >
+					<div class="btn-join btn-join-tw">JOIN US ON TWITTER</div>
+				</div>
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<p>Copyright © DigitalCube 2016. All rights reserved.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+    <script src="./assets/js/jquery.js"></script>
+	<script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/video.js"></script>
+	<script src="./assets/js/team.js"></script>
+<!-- 	<script src="./assets/js/scroll.js"></script>
+ -->	<script src="./assets/js/easy-scroll.js"></script>
+	<script src="./assets/js/nav-scroll.js"></script>
+
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> -->
+	<script src="./assets/owl-carousel/owl.carousel.js"></script>
+<script src="./assets/owl-carousel/owl.carousel.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+   
+      $("#sponsors-carousel").owlCarousel({items : 1,rewindNav : false, 
+    pagination : false,  });
+});
+</script>
+	<script src="./assets/js/gallery.js"></script>
+
+	
+</body>
+</html>
