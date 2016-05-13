@@ -14,6 +14,15 @@ $(document).ready(function() {
     //        $(this).find().next('input').focus();
     //    }
     //});
+
+    // //email add 
+//         var email = 'mo' + 'jl' + 'et' +
+//                     '@' + 'di' + 'gi' +
+//                     'tal' + 'cube' + 
+//                     '.' + 'rs';
+                    
+//         $('#mail_append').html(email);
+//         $('#mail_append').attr('href','mailto:'+email);
       function onkeypress(){
          $(document).on('keyup',function(evt) {
             if (evt.keyCode == 27) {

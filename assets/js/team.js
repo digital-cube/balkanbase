@@ -44,23 +44,30 @@ $(document).ready(function() {
                     "fb": "https://www.facebook.com/milan.todorovic.3975",
                 },
                
+                "nemanja" : {
+                    "name":"Nemanja Palancanin ",
+                    "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+                    "img": "nemanja.png",
+                    "position": "left",
+                    "fb": "disable",
+                },
+               
 
             };
-
-     team_draw(persons);
      var template = ''
+     team_draw(persons);
      function team_draw(persons){
      Object.keys(persons).forEach(function(p){      
                 var per=persons[p];
 
                 //console.log(per.position);
-  
+                if(per.fb == 'disable'){var disable = 'disabled';}else{var disable = '';}
                 if(per.position == 'left'){
 
                     var def_class = 'team-left';
 
                     var after = '<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 col-sm-push-1 col-md-push-1 col-lg-push-1" >'+
-                                '<div href="'+per.fb+'" class="btn-join btn-join-fb">Follow on facebook</div>'+
+                                '<div class="btn-join btn-join-fb '+disable+'">Follow on facebook</div>'+
                                 '</div>';
                 
                     var before = '<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 ">'+
@@ -68,6 +75,8 @@ $(document).ready(function() {
                                 '</div>';
 
                     var middle_class = '';
+
+
             
                 }else{
 
@@ -78,7 +87,7 @@ $(document).ready(function() {
                                 '</div>';
 
                     var before = '<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 " >'+
-                                '<div class="btn-join btn-join-fb">Follow on facebook</div>'+
+                                '<div class="btn-join btn-join-fb '+disable+'">Follow on facebook</div>'+
                                 '</div>'; 
 
                     var middle_class = 'col-sm-push-1 col-md-push-1 col-lg-push-1 team-right';
