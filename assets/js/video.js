@@ -31,8 +31,8 @@ $(document).ready(function() {
                             '<div class="video-thumb" style="background: url(\'./assets/images/'+vid.img+'\') no-repeat;"> '+
                             ' <img class="play-btn pressed" data-id='+i+' src="./assets/images/play-gray.png"/> '+
                             '</div> '+
-                            '<h4>'+vid.title+'</h4> '+
-                            '<div class="btn-join btn-join-vim">WATCH ON VIMEO</div> '+
+                            '<h4 class="tr" key="video_title_'+i+'">'+vid.title+'</h4> '+
+                            '<div class="btn-join btn-join-vim tr" key="video_btn_title">WATCH ON VIMEO</div> '+
                             '</div>';  
 
      });
