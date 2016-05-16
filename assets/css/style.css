@@ -101,9 +101,9 @@
   .video-section h4{font-weight: 300;font-size: 1em;text-align: left;padding:5px 0px 5px 30px;}
 
   .video-section .btn-join-vim{background: url("../images/vim-logo.png") no-repeat; width:40px; }
-  .footer .btn-join-fb{background: url("../images/fb-logo.png") no-repeat; width:40px; }
+  .footer .btn-join-fb{text-transform:uppercase;background: url("../images/fb-logo.png") no-repeat; width:40px; }
   .team-section .btn-join-fb{background: url("../images/fb-logo.png") no-repeat; width:40px; }
-  .footer .btn-join-tw{background: url("../images/twitter-logo.png") no-repeat; width:40px; }
+  .footer .btn-join-tw{text-transform:uppercase; background: url("../images/twitter-logo.png") no-repeat; width:40px; }
   .youtube-section .btn-join-fb{background: url("../images/twitter-logo.png") no-repeat; width:40px; }
   .team-setion .btn-left{margin-left:;}
   .team-setion .btn-rght{margin-left:;}

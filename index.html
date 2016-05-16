@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="rs">
 <head>
-	<title>Digital cube</title>
+	<title>Balkanbase.org</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -37,8 +37,8 @@
 <div id="overlay"></div>
 <div id="overlayContent">
     <img id="imgBig" src="" alt="" width="70%" />
-    <div id="show-video"  width="70%" >
-    </div>
+    <div id="show-video"  width="70%" ></div>
+    <div id="show-thanks"  width="70%" ></div>
 </div>
 <div class='desctop' id='top'></div>
 <div class="container-fluid">
@@ -67,10 +67,10 @@
 									<li class=""><a class="page-scroll tr"  key="contact"  href="#contact"> </a></li>
 									  <li class="lang_switcher" style="top:15px;left:45px;">
 
-					                <span id="en" class="langs">EN</span>
+					                <span id="en" data-id="true" class="langs">EN</span>
 					                |
 
-					                <span id="sr" class="langs">RS</span>
+					                <span id="sr" data-id="false" class="langs">RS</span>
 
 					            </li>
 							  </ul>
@@ -283,9 +283,13 @@
 									<textarea  maxlength="320" key="contact_message"  class="ts focusedNone form-control" id="message" placeholder="Enter your message"></textarea>
 		  						</fieldset>						
 	  						</div>
-	  						<div class="col-xs-12 col-sm-6 col-sm-offset-6 col-md-6 col-md-offset-6 col-lg-6 col-lg-offset-6">
-	  							<div class="pull-right send-btn tr" key="contact_btn"></div>
+	  						<div class="col-xs-12 col-sm-6  col-md-6  col-lg-6">
+	  							<div class="pull-right  tr"  id="info"></div>
 							</div>
+	  						<div class="col-xs-12 col-sm-6  col-md-6  col-lg-6">
+	  							<div class="pull-right send-btn tr" key="contact_btn" id="sendmessage"></div>
+							</div>
+
 						</div>
 
 					</div>
@@ -332,6 +336,7 @@
 <!-- 	<script src="./assets/js/scroll.js"></script>
  -->	<script src="./assets/js/easy-scroll.js"></script>
 	<script src="./assets/js/language.js"></script>
+	<script src="./assets/js/sender.js"></script>
 	<script src="./assets/js/nav-scroll.js"></script>
 
 	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> -->

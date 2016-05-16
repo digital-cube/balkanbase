@@ -135,30 +135,78 @@ lang['sr']['footer_btn_fb']='Pratite nas na facebook-u';
 lang['sr']['footer_btn_tw']='Pratite nas na twitter-u';
 
 
-// $('#mail_info').html(email);
-// $('#phone_info').html(phone);
-// $('#mail_info_href').attr('href','mailto:'+email);
+//////Contact translate form
 
+lang['en']['form_empty'] = 'Empty fields.';
+lang['sr']['form_empty']   = 'Popunite prazna polja.';
+lang['sr']['form_name']   = 'Unesite Vase ime.';
+lang['en']['form_name']   = 'Please insert your name.';
+lang['sr']['form_email']   = 'Unesite Vas email.';
+lang['en']['form_email']   = 'Please insert your email.';
+lang['sr']['form_message']   = 'Unesite Vasu poruku.';
+lang['en']['form_message']   = 'Please insert your message.';
+lang['en']['form_email_error']   = 'Email is not corect.';
+lang['sr']['form_email_error']   = 'Vas email nije validan';
+lang['en']['form_ok']   = 'Thank you, we will soon contact you.';
+lang['sr']['form_ok']   = 'Hvala, kontaktiracemo Vas u najkracem roku.';
+lang['en']['form_error']   = 'Something wrong, please try again.';
+lang['sr']['form_error']   = 'Greska, molimo Vas pokusajte ponovo.';
+var langs='';
+var test ='';
 
+if(sessionStorage.langs!=''){
+ 
+  if(sessionStorage.langs=='sr'){
+    langs = 'sr';
+    sessionStorage.langs = 'sr';
+  }else{
+    langs = 'en';
+    sessionStorage.langs = 'en';
+  }
 
+}else{
+  langs = 'en';
+  sessionStorage.langs = 'en';
+}
 
-$(document).ready(function() {
-
-   var langs='en';
-     
-   loadSiteContent(langs);
+    function testLangClick(){
+              test = $('#en').attr('data-id');
+              sessionStorage.langs = 'sr';
+              if(test=='false'){
+                test = $('#sr').attr('data-id');
+                langs = 'sr';
+              }else{
+                 langs='en'; 
+                sessionStorage.langs='en';
+              }
+          }
+    
+    loadSiteContent(langs);
     function loadSiteContent(langs){
-       $('.tr').each(function(i){
-                $(this).text(lang[langs][ $(this).attr('key') ]);
+        
+        $('.tr').each(function(i){
+            $(this).text(lang[langs][ $(this).attr('key') ]);
 
-            });
-            $('.ts').each(function(i){
-                $(this).attr('placeholder',lang[langs][ $(this).attr('key') ]);
-            });
-            langs = '';
+        });
+        $('.ts').each(function(i){
+            $(this).attr('placeholder',lang[langs][ $(this).attr('key') ]);
+        });
+        //set all to false
+        $('.langs').attr('data-id', 'false');
+        $('#'+langs).attr('data-id', 'true'); // set active to true
+        langs = '';// unset langs
+
     }
-    $('.langs').on('click' ,function() {
-        var langs = $(this).attr('id');
+    $('.langs').on('click' ,function(langs) {
+   
+      
+        langs = $(this).attr('id');
+        $('.langs').attr('data-id', 'false');
+        $('#'+langs).attr('data-id', 'true'); // set active to true
+
+
+        testLangClick();
+                       alert(sessionStorage.langs);
 
         $('.tr').each(function(i){
             $(this).text(lang[langs][ $(this).attr('key') ]);
@@ -167,7 +215,6 @@ $(document).ready(function() {
         $('.ts').each(function(i){
             $(this).attr('placeholder',lang[langs][ $(this).attr('key') ]);
         });
+        $('#info').html('');
+    });
 
-    } );
-
-});
