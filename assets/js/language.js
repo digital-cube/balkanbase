@@ -176,8 +176,8 @@ if(sessionStorage.langs!=''){
                 test = $('#sr').attr('data-id');
                 langs = 'sr';
               }else{
-                 langs='en'; 
-                sessionStorage.langs='en';
+                 langs='sr'; 
+                sessionStorage.langs='sr';
               }
           }
     
