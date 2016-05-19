@@ -1,19 +1,19 @@
 $(document).ready(function() {
  var videos = { 
                 "1" : {
-                    "title":"MT Casale ws base jump, belly cam",
+                    "title":"WS BASE Jump - Monte Baldo, Altissimo exit.",
                     "img": "video-thumb.png",
-                    "link": '<iframe width="560" height="315" src="https://www.youtube.com/embed/hT_nvWreIhg?list=RD5j1RCys4R0g" frameborder="0" allowfullscreen></iframe>',
+                    "link": '<iframe src="https://player.vimeo.com/video/165696861" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>',
                 },
                 "2" : {
-                    "title":"MT Casale ws base jump, belly cam",
+                    "title":"TheVampireDiaries-MountRangeOfCasale",
                     "img": "video-thumb.png",
-                    "link": '<iframe width="560" height="315" src="https://www.youtube.com/embed/hT_nvWreIhg?list=RD5j1RCys4R0g" frameborder="0" allowfullscreen></iframe>',
+                    "link": '<iframe src="https://player.vimeo.com/video/57453446" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>',
                 },
                 "3" : {
-                    "title":"MT Casale ws base jump, belly cam",
+                    "title":"Monte Casale WS BASE jump",
                     "img": "video-thumb.png",
-                    "link": '<iframe width="560" height="315" src="https://www.youtube.com/embed/hT_nvWreIhg?list=RD5j1RCys4R0g" frameborder="0" allowfullscreen></iframe>',
+                    "link": '<iframe src="https://player.vimeo.com/video/163065123" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>',
                 },
 
             };
