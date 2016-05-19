@@ -206,8 +206,7 @@ if(sessionStorage.langs!=''){
 
 
         testLangClick();
-                       alert(sessionStorage.langs);
-
+                    
         $('.tr').each(function(i){
             $(this).text(lang[langs][ $(this).attr('key') ]);
 
