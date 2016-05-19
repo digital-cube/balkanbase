@@ -20,6 +20,7 @@ $(document).ready(function() {
                     "name":"Petar Lončar",
                     "desc_sr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor mi in leo hendrerit, id suscipit purus condimentum. Curabitur et elit ut nunc euismod mollis eu et lorem. Ut faucibus pulvinar leo quis imperdiet. Sed vitae libero lacus. Nunc at luctus lorem. Integer gravida lectus vitae erat semper, a scelerisque mi aliquam. Nunc interdum pretium pharetra.",
                     "desc_en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor mi in leo hendrerit, id suscipit purus condimentum. Curabitur et elit ut nunc euismod mollis eu et lorem. Ut faucibus pulvinar leo quis imperdiet. Sed vitae libero lacus. Nunc at luctus lorem. Integer gravida lectus vitae erat semper, a scelerisque mi aliquam. Nunc interdum pretium pharetra.",
+                    "img": "petar.png",
                     "position": "left",
                     "fb": "https://www.facebook.com/petar.loncar.395",
                 },
