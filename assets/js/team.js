@@ -66,14 +66,14 @@ $(document).ready(function() {
 
             if (lang == 'en'){description = per.desc_en;}else{description =per.desc_sr;}
             //console.log(per.position);
-            if(per.fb == 'disable'){var disable = 'disabled';}else{var disable = '';}
+            if(per.fb == 'disable'){var disable = 'link_go disabled';}else{var disable = 'link_go';}
             if(per.position == 'left'){
 
             var def_class = 'team-left';
 
             var after = 
                          '<div class="hidden-xs col-sm-3 col-md-3 col-lg-3 col-sm-push-1 col-md-push-1 col-lg-push-1" >'+
-                        '<div class="btn-join btn-join-fb '+disable+'">Follow on facebook</div>'+
+                        '<div class="btn-join btn-join-fb '+disable+'" data-id="'+per.fb+'">Follow on facebook</div>'+
                         '</div>';
             
             var before = '<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 ">'+
@@ -96,7 +96,7 @@ $(document).ready(function() {
                              '<img class="img-circle" style="float:right;" src="./assets/images/team/'+per.img+'" title="'+per.name+'" alt="'+per.name+'">'+
                              '</div>'+
                              '<div class="hidden-xs col-sm-3 col-md-3 col-lg-3 " >'+
-                            '<div class="btn-join btn-join-fb '+disable+'">Follow on facebook</div>'+
+                            '<div class="btn-join btn-join-fb '+disable+'" data-id="'+per.fb+'">Follow on facebook</div>'+
                             '</div>'; 
 
                 var middle_class = 'col-sm-push-1 col-md-push-1 col-lg-push-1 team-right';
@@ -118,3 +118,5 @@ $(document).ready(function() {
         }  
                    
 });
+
+

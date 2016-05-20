@@ -53,11 +53,7 @@ $(document).ready(function() {
           
     });  
     
-    $('.link_go').on('click',function(){
-        var data = $(this).attr('data-id');
-        window.open(data,'_blank');
-        window.open(data);
-    });
+    
 
 
     //---video section - on mouse enter change play img and border color ----//     
@@ -81,3 +77,10 @@ $(document).ready(function() {
 
 
 });
+
+
+$(document).on('click','.link_go',function(){
+        var data = $(this).attr('data-id');
+        window.open(data,'_blank');
+        window.open(data);
+    });
