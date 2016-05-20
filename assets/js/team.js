@@ -71,7 +71,8 @@ $(document).ready(function() {
 
             var def_class = 'team-left';
 
-            var after = '<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 col-sm-push-1 col-md-push-1 col-lg-push-1" >'+
+            var after = 
+                         '<div class="hidden-xs col-sm-3 col-md-3 col-lg-3 col-sm-push-1 col-md-push-1 col-lg-push-1" >'+
                         '<div class="btn-join btn-join-fb '+disable+'">Follow on facebook</div>'+
                         '</div>';
             
@@ -79,7 +80,7 @@ $(document).ready(function() {
                          '<img class="img-circle" src="./assets/images/team/'+per.img+'" title="'+per.name+'" alt="'+per.name+'">'+
                          '</div>';
 
-            var middle_class = '';
+            var middle_class = 'col-sm-push-1';
 
 
             
@@ -87,11 +88,14 @@ $(document).ready(function() {
 
                 var def_class = '';
 
-                var after ='<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 col-sm-push-1 col-md-push-1 col-lg-push-1 ">'+
+                var after ='<div class="hidden-xs col-sm-2 col-md-2 col-lg-2 col-sm-push-1 col-md-push-1 col-lg-push-1 ">'+
                             '<img class="img-circle" src="./assets/images/team/'+per.img+'" title="'+per.name+'" alt="'+per.name+'">'+
                             '</div>';
 
-                var before = '<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 " >'+
+                var before = '<div class="col-xs-12 hidden-sm hidden-md hidden-lg">'+
+                             '<img class="img-circle" style="float:right;" src="./assets/images/team/'+per.img+'" title="'+per.name+'" alt="'+per.name+'">'+
+                             '</div>'+
+                             '<div class="hidden-xs col-sm-3 col-md-3 col-lg-3 " >'+
                             '<div class="btn-join btn-join-fb '+disable+'">Follow on facebook</div>'+
                             '</div>'; 
 

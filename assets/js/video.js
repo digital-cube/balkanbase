@@ -2,17 +2,20 @@ $(document).ready(function() {
  var videos = { 
                 "1" : {
                     "title":"WS BASE Jump - Monte Baldo, Altissimo exit.",
-                    "img": "video-thumb.png",
+                    "img": "video-thumb-1.png",
+                    "url": "https://vimeo.com/165696861",
                     "link": '<iframe src="https://player.vimeo.com/video/165696861" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>',
                 },
                 "2" : {
                     "title":"TheVampireDiaries-MountRangeOfCasale",
-                    "img": "video-thumb.png",
+                    "img": "video-thumb-2.png",
+                    "url": "https://vimeo.com/57453446",
                     "link": '<iframe src="https://player.vimeo.com/video/57453446" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>',
                 },
                 "3" : {
                     "title":"Monte Casale WS BASE jump",
-                    "img": "video-thumb.png",
+                    "img": "video-thumb-3.png",
+                    "url": "https://vimeo.com/163065123",
                     "link": '<iframe src="https://player.vimeo.com/video/163065123" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>',
                 },
 
@@ -27,12 +30,12 @@ $(document).ready(function() {
      Object.keys(videos).forEach(function(p){      
                 var vid=videos[p];
                 i++;
-                template += '<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">'+
+                template += '<div class="vid col-xs-12 col-sm-12 col-md-4 col-lg-4">'+
                             '<div class="video-thumb" style="background: url(\'./assets/images/'+vid.img+'\') no-repeat;"> '+
                             ' <img class="play-btn pressed" data-id='+i+' src="./assets/images/play-gray.png"/> '+
                             '</div> '+
                             '<h4 class="tr" key="video_title_'+i+'">'+vid.title+'</h4> '+
-                            '<div class="btn-join btn-join-vim tr" key="video_btn_title">WATCH ON VIMEO</div> '+
+                            '<div class="btn-join btn-join-vim link_go tr" data-id="'+vid.url+'" key="video_btn_title">WATCH ON VIMEO</div> '+
                             '</div>';  
 
      });
@@ -49,7 +52,13 @@ $(document).ready(function() {
                 $("#overlayContent").fadeIn();
           
     });  
-      
+    
+    $('.link_go').on('click',function(){
+        var data = $(this).attr('data-id');
+        window.open(data,'_blank');
+        window.open(data);
+    });
+
 
     //---video section - on mouse enter change play img and border color ----//     
     $('.video-thumb').on('mouseenter',function(){

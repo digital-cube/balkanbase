@@ -3,9 +3,7 @@
     /*  height:600px;
         */  overflow:hidden;
     position: relative;
-    /*background-image: url('../images/pat.png');
-        background-size: cover;*/
-
+  
 
   }
   .row-centered{text-align: center;}
@@ -74,13 +72,13 @@
     position: relative;}
   #team-holder{ padding: 100px 0px;}
   #sponsors-carousel{top:50px;bottom: 50px; height: 200px;}
-  .section .about-img{ background: url('../images/vector-logo.png') no-repeat;}
-  .section .gall-img{ background: url('../images/gallery-logo.png') no-repeat; left:30px;}
-  .section .members-img{ background: url('../images/members-logo.png') no-repeat; left:40px;}
-  .section .partners-img{ background: url('../images/partners-logo.png') no-repeat; left:40px;}
-  .section .contact-img{ background: url('../images/contact-logo.png') no-repeat; left:40px;}
-  .section .video-img{ background: url('../images/video-logo.png') no-repeat; left:40px;}
-  .section .team-img{ background: url('../images/team-logo.png') no-repeat; left:40px;}
+  .section .about-img{ background: url('../images/vector-logo-white.png') no-repeat;}
+  .section .gall-img{ background: url('../images/gallery-logo-white.png') no-repeat; left:30px;}
+  .section .members-img{ background: url('../images/members-logo-white.png') no-repeat; left:40px;}
+  .section .partners-img{ background: url('../images/partners-logo-white.png') no-repeat; left:40px;}
+  .section .contact-img{ background: url('../images/contact-logo-white.png') no-repeat; left:40px;}
+  .section .video-img{ background: url('../images/video-logo-white.png') no-repeat; left:40px;}
+  .section .team-img{ background: url('../images/team-logo-white.png') no-repeat; left:40px;}
   .team-left{text-align: left;}
   .team-right{text-align: right;}
   .section .logo {
@@ -99,12 +97,13 @@
 
   }
   .video-section h4{font-weight: 300;font-size: 1em;text-align: left;padding:5px 0px 5px 30px;}
-
-  .video-section .btn-join-vim{background: url("../images/vim-logo.png") no-repeat; width:40px; }
+  .btn-join {text-transform:uppercase;}
+  .video-section  .btn-join-vim {background: url("../images/vim-logo.png") no-repeat; width:40px; }
   .footer .btn-join-fb{text-transform:uppercase;background: url("../images/fb-logo.png") no-repeat; width:40px; }
   .team-section .btn-join-fb{background: url("../images/fb-logo.png") no-repeat; width:40px; }
   .footer .btn-join-tw{text-transform:uppercase; background: url("../images/twitter-logo.png") no-repeat; width:40px; }
   .youtube-section .btn-join-fb{background: url("../images/twitter-logo.png") no-repeat; width:40px; }
+  .youtube-section .btn-join-vim{background: url("../images/vim-logo.png") no-repeat; width:40px; }
   .team-setion .btn-left{margin-left:;}
   .team-setion .btn-rght{margin-left:;}
   .video-section .btn-join,.video-section .btn-join:hover{
@@ -347,24 +346,42 @@ button:hover,
       content: "";
     }    
     #bg_container{display: none;}
-
+#bg{
+    background-image: url('../images/final-header.png');
+    background-size: cover;
+  height: 350px;
+     
+  }
+        .vid {margin-top: 50px;}
+        .vid h4{text-align: center!important; padding: 5px 0px 5px 0px;}
+        .video-section .btn-join, .video-section .btn-join:hover{width: 60%;}
 
 }
 
 @media (min-width: 320px) and (max-width: 767px){
        .navbar .navbar-nav {}
-
+#bg{
+    background-image: url('../images/final-header.png');
+    background-size: cover;
+height: 350px;}
       .white{background: white;}
   .footer .btn-join::after{
       content: "";
     }
         #bg_container{display: none;}
 
+        .vid {margin-top: 50px;}
+        .vid h4{text-align: center!important; padding: 5px 0px 5px 0px;}
+        .video-section .btn-join, .video-section .btn-join:hover{width: 60%;}
+
 }
 
 @media  (min-width: 768px) and (max-width: 991px) {
     .navbar{height:97px;}
       .navbar .navbar-nav {padding-top:47px;}
+.vid {margin-top: 50px;}
+        .vid h4{text-align: center!important; padding: 5px 0px 5px 0px;}
+        .video-section .btn-join, .video-section .btn-join:hover{width: 60%;}
 
 
 }

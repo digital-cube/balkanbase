@@ -152,10 +152,11 @@ lang['sr']['form_ok']   = 'Hvala, kontaktiracemo Vas u najkracem roku.';
 lang['en']['form_error']   = 'Something wrong, please try again.';
 lang['sr']['form_error']   = 'Greska, molimo Vas pokusajte ponovo.';
 var langs='';
+sessionStorage.langs = '';
 var test ='';
 
 if(sessionStorage.langs!=''){
- 
+
   if(sessionStorage.langs=='sr'){
     langs = 'sr';
     sessionStorage.langs = 'sr';
@@ -165,8 +166,8 @@ if(sessionStorage.langs!=''){
   }
 
 }else{
-  langs = 'en';
-  sessionStorage.langs = 'en';
+  langs = 'sr';
+  sessionStorage.langs = 'sr';
 }
 
     function testLangClick(){
@@ -176,8 +177,8 @@ if(sessionStorage.langs!=''){
                 test = $('#sr').attr('data-id');
                 langs = 'sr';
               }else{
-                 langs='sr'; 
-                sessionStorage.langs='sr';
+                 langs='en'; 
+                sessionStorage.langs='en';
               }
           }
     
