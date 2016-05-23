@@ -1,7 +1,12 @@
-  #bg{
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web);
+
+body{
+   font-family: 'Titillium Web',Regular;
+}#bg{
     width:100%;
     /*  height:600px;
-        */  overflow:hidden;
+        */  
+    overflow:hidden;
     position: relative;
   
 
@@ -331,6 +336,8 @@ button:hover,
 
 
 @media (max-width: 319px){
+    .btn-join{font-size:0.8em;}
+
        .navbar .navbar-nav {}
   .footer .btn-join::after{
       content: "";
@@ -341,6 +348,8 @@ button:hover,
 
 @media (min-width: 320px) and (max-width: 420px){
        .white{background: white;}
+         .btn-join{font-size:0.8em;}
+
        .navbar .navbar-nav {}
   .footer .btn-join::after{
       content: "";
@@ -359,6 +368,7 @@ button:hover,
 }
 
 @media (min-width: 320px) and (max-width: 767px){
+  .btn-join{font-size:0.8em;}
        .navbar .navbar-nav {}
 #bg{
     background-image: url('../images/final-header.png');

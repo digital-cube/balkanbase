@@ -82,5 +82,4 @@ $(document).ready(function() {
 $(document).on('click','.link_go',function(){
         var data = $(this).attr('data-id');
         window.open(data,'_blank');
-        window.open(data);
     });
