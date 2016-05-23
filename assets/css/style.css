@@ -388,6 +388,7 @@ height: 350px;}
 
 @media  (min-width: 768px) and (max-width: 991px) {
     .navbar{height:97px;}
+    
       .navbar .navbar-nav {padding-top:47px;}
 .vid {margin-top: 50px;}
         .vid h4{text-align: center!important; padding: 5px 0px 5px 0px;}

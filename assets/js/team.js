@@ -77,7 +77,7 @@ $(document).ready(function() {
                         '</div>';
             
             var before = '<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 ">'+
-                         '<img class="img-circle" src="./assets/images/team/'+per.img+'" title="'+per.name+'" alt="'+per.name+'">'+
+                         '<div class=" hidden-sm hidden-md hidden-lg btn-join btn-join-fb '+disable+'" style="width: 100px;float: right;padding: 14px 20px;"data-id="'+per.fb+'">Facebook</div><img class="img-circle" src="./assets/images/team/'+per.img+'" title="'+per.name+'" alt="'+per.name+'">'+
                          '</div>';
 
             var middle_class = 'col-sm-push-1';
@@ -93,7 +93,7 @@ $(document).ready(function() {
                             '</div>';
 
                 var before = '<div class="col-xs-12 hidden-sm hidden-md hidden-lg">'+
-                             '<img class="img-circle" style="float:right;" src="./assets/images/team/'+per.img+'" title="'+per.name+'" alt="'+per.name+'">'+
+                             '<div class="  hidden-md hidden-lg btn-join btn-join-fb '+disable+'" style="width: 100px;float: left;padding: 14px 20px;"data-id="'+per.fb+'">Facebook</div><img class="img-circle" style="float:right;" src="./assets/images/team/'+per.img+'" title="'+per.name+'" alt="'+per.name+'">'+
                              '</div>'+
                              '<div class="hidden-xs col-sm-3 col-md-3 col-lg-3 " >'+
                             '<div class="btn-join btn-join-fb '+disable+'" data-id="'+per.fb+'">Follow on facebook</div>'+
