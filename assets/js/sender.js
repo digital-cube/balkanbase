@@ -61,7 +61,7 @@ $(document).ready(function() {
                     
             $.ajax({
     	        type: "PUT",
-                url: "http://digitalcube.rs/econtact/contact",
+                url: "http://developer.digitalcube.rs:9885/eContact/contact",
     	        data: {data:JSON.stringify(params),email:email,mailmsg:msg,web:'balkanbase'},
     	        success : function(text){
       				addText(lang[langs]['form_ok'] );           
